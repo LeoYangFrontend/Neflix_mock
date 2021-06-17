@@ -1,44 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Netflix Mock
 
-## Available Scripts
+## Quick Start
 
-In the project directory, you can run:
+1. run server
 
-### `yarn start`
+```
+npm run server
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. start frontend
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+npm i && npm start
+```
 
-### `yarn test`
+## Feature should provide
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   [] The top row will be the ‘My List’ row and will display the titles included in ‘mylist’ array.
 
-### `yarn build`
+-   [] The second row will be the recommendation row which will display the titles included in ‘recommendations’ array.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   [] Hovering over an image in the ‘My List’ row should create a “Remove” button displayed below the image. Clicking on the button should remove the title from the “My List” row.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-   [] Hovering over an image in the recommendations row should create an “Add” button displayed below the image. Clicking on the button should add the title to the “My List” row.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   [] The list of titles in the “My List” row should be displayed at the bottom of the page.
 
-### `yarn eject`
+-   [] Remove should move the title to recommended
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   [] Put a netflix logo at the top left
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   [] Ensure that a http call is made to retrieve data and not use JSON file as an object with data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   [] Render the data with a single template only and ensure that different functions are written for the same layout for add and remove
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   [] PLEASE DO IT IN REACT AND REDUX
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   [] Please create a git repository and push the code there and send across the link when complete.
