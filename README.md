@@ -2,17 +2,33 @@
 
 ## Quick Start
 
-1. run server
+1. clone this repo
 
 ```
-npm run server
+git clone https://github.com/LeoYangFrontend/Neflix_mock.git
 ```
 
-2. start frontend
+```
+cd netflix_mock
+```
+
+2. run server
 
 ```
-npm i && npm start
+npm i && npm run server
 ```
+
+3. start frontend
+
+```
+npm start
+```
+
+## Demo
+
+**This Demo is don't have a backend to retrieve data**
+
+https://leoyangfrontend.github.io/Neflix_mock/
 
 ## Feature should provide
 
@@ -30,9 +46,9 @@ npm i && npm start
 
 -   [x] Put a netflix logo at the top left
 
--   [] Ensure that a http call is made to retrieve data and not use JSON file as an object with data
+-   [x] Ensure that a http call is made to retrieve data and not use JSON file as an object with data
 
--   [] Render the data with a single template only and ensure that different functions are written for the same layout for add and remove
+-   [x] Render the data with a single template only and ensure that different functions are written for the same layout for add and remove
 
 -   [x] PLEASE DO IT IN REACT AND REDUX
 
