@@ -5,11 +5,11 @@
 1. clone this repo
 
 ```
-git clone https://github.com/LeoYangFrontend/Neflix_mock.git
+git clone https://github.com/LeoYangFrontend/Netflix_mock.git
 ```
 
 ```
-cd netflix_mock
+cd Netflix_mock
 ```
 
 2. run server
@@ -28,7 +28,9 @@ npm start
 
 **This Demo is don't have a backend to retrieve data**
 
-https://leoyangfrontend.github.io/Neflix_mock/
+Please Open In **Safari**
+
+https://leoyangfrontend.github.io/Netflix_mock/
 
 ## Feature should provide
 
