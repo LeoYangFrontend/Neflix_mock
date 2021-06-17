@@ -12,13 +12,13 @@ git clone https://github.com/LeoYangFrontend/Netflix_mock.git
 cd Netflix_mock
 ```
 
-2. run server
+2. Install and run server
 
 ```
 npm i && npm run server
 ```
 
-3. start frontend
+1. start
 
 ```
 npm start
@@ -31,6 +31,10 @@ npm start
 Please Open In **Safari**
 
 https://leoyangfrontend.github.io/Netflix_mock/
+
+## Screen Shot
+
+![ScreenShot](./screenShot.png)
 
 ## Feature should provide
 

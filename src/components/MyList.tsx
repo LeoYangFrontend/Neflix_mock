@@ -10,6 +10,7 @@ interface Props {}
 
 const MyList: FC<Props> = () => {
     const MyList = useSelector((state: RootState) => state.movies.mylist);
+    const dataStatus = useSelector((state: RootState) => state.movies.status);
 
     const dispatch = useAppDispatch();
 
@@ -24,7 +25,8 @@ const MyList: FC<Props> = () => {
                         img={movie.img}
                         btnText={'REMOVE'}
                         btnOnClick={() => {
-                            dispatch(removeFromMyList(movie));
+                            if (dataStatus === 'idle')
+                                dispatch(removeFromMyList(movie));
                         }}
                     ></Card>
                 );

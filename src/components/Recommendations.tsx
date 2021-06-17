@@ -11,6 +11,7 @@ const Recommendations: FC<Props> = () => {
     const Recommendations = useSelector(
         (state: RootState) => state.movies.recommendations
     );
+    const dataStatus = useSelector((state: RootState) => state.movies.status);
 
     const dispatch = useAppDispatch();
 
@@ -25,7 +26,8 @@ const Recommendations: FC<Props> = () => {
                         img={movie.img}
                         btnText={'ADD'}
                         btnOnClick={() => {
-                            dispatch(addToMyList(movie));
+                            if (dataStatus === 'idle')
+                                dispatch(addToMyList(movie));
                         }}
                     ></Card>
                 );
