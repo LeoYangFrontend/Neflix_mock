@@ -1,26 +1,29 @@
-import React, { FC } from 'react';
-import Card from './Card';
+import React, { FC, useMemo } from 'react';
+import { MovieState } from '../features/counter/movieSlice';
 import styles from './DisplayRow.module.css';
 
 interface Props {
     movies: any[];
     DisplayName: string;
+    renderBtn: (movie: MovieState) => JSX.Element;
 }
-const DisplayRow: FC<Props> = ({ DisplayName, movies }) => {
+const DisplayRow: FC<Props> = ({ DisplayName, movies, renderBtn }) => {
+    const numOFMovie = useMemo(() => movies.length, [movies]);
+
     return (
         <div>
             <h2 className={styles.listTitle}>{DisplayName.toUpperCase()}</h2>
-            <ul className={styles.listItem}>
-                {movies.map((movie) => (
-                    <li>
-                        <Card
-                            title={movie.title}
-                            img={movie.img}
-                            btnText="add"
-                        />
-                    </li>
-                ))}
-            </ul>
+            {!numOFMovie ? (
+                <div>Nothing in {DisplayName.toUpperCase()}</div>
+            ) : (
+                <ul className={styles.listItems}>
+                    {movies.map((movie) => (
+                        <li key={movie.id} className={styles.listItem}>
+                            {renderBtn(movie)}
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 };

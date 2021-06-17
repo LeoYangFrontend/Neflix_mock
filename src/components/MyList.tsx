@@ -1,33 +1,35 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from '../app/hooks';
+import { RootState } from '../app/store';
+import { MovieState, removeFromMyList } from '../features/counter/movieSlice';
+import Card from './Card';
 import DisplayRow from './DisplayRow';
-
-type movie = {
-    id: string;
-    title: string;
-    img: string;
-};
 
 interface Props {}
 
 const MyList: FC<Props> = () => {
-    const [MyList, setMyList] = useState([
-        {
-            title: 'Futurama',
-            id: 1,
-            img: 'http://cdn1.nflximg.net/webp/7621/3787621.webp',
-        },
-        {
-            title: 'The Interview',
-            id: 2,
-            img: 'http://cdn1.nflximg.net/webp/1381/11971381.webp',
-        },
-        {
-            title: 'Gilmore Girls',
-            id: 3,
-            img: 'http://cdn1.nflximg.net/webp/7451/11317451.webp',
-        },
-    ]);
+    const MyList = useSelector((state: RootState) => state.movies.mylist);
 
-    return <DisplayRow movies={MyList} DisplayName={'MY List'} />;
+    const dispatch = useAppDispatch();
+
+    return (
+        <DisplayRow
+            movies={MyList}
+            DisplayName={'MY List'}
+            renderBtn={(movie: MovieState) => {
+                return (
+                    <Card
+                        title={movie.title}
+                        img={movie.img}
+                        btnText={'REMOVE'}
+                        btnOnClick={() => {
+                            dispatch(removeFromMyList(movie));
+                        }}
+                    ></Card>
+                );
+            }}
+        />
+    );
 };
 export default MyList;

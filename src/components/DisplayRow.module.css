@@ -1,6 +1,11 @@
-.listItem {
+.listItems {
     list-style-type: none;
     display: flex;
+    align-items: center;
+}
+.listItem {
+    /* border: 1px #f00 solid; */
+    margin: 0px 10px;
 }
 
 .listTitle {

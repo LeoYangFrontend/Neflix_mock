@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Footer from './components/Footer';
 // import Example from './components/Example';
 import Header from './components/Header';
 import MyList from './components/MyList';
@@ -17,13 +18,7 @@ function App() {
             <Header />
             <MyList />
             <Recommendations />
-            <footer>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
-            </footer>
+            <Footer />
         </div>
     );
 }

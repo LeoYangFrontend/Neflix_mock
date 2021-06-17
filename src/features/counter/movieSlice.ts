@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from '../../app/store';
-import { fetchCount } from './counterAPI';
 
 export interface MovieState {
     id: string;
@@ -53,8 +52,22 @@ export const movieSlice = createSlice({
     name: 'movie',
     initialState,
     reducers: {
-        addToMyList: (state, action: PayloadAction<string>) => {},
-        removeFromMyList: (state, action: PayloadAction<string>) => {},
+        addToMyList: (state, action: PayloadAction<MovieState>) => {
+            return {
+                mylist: [...state.mylist, action.payload],
+                recommendations: state.recommendations.filter(
+                    (recommendMovie) => recommendMovie.id !== action.payload.id
+                ),
+            };
+        },
+        removeFromMyList: (state, action: PayloadAction<MovieState>) => {
+            return {
+                mylist: state.mylist.filter(
+                    (listMovie) => listMovie.id !== action.payload.id
+                ),
+                recommendations: [...state.recommendations, action.payload],
+            };
+        },
     },
 });
 
