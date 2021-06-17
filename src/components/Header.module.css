@@ -1,0 +1,10 @@
+.header {
+    background-color: black;
+    height: 4em;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 4em;
+}
