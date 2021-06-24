@@ -1,8 +1,8 @@
 # Netflix Mock
 
-## Quick Start
+## How to Start
 
-1. clone this repo
+1. **clone this repo**
 
 ```
 git clone https://github.com/LeoYangFrontend/Netflix_mock.git
@@ -12,25 +12,34 @@ git clone https://github.com/LeoYangFrontend/Netflix_mock.git
 cd Netflix_mock
 ```
 
-2. Install and run server
+2. **Install and Run server**
 
 ```
 npm i && npm run server
 ```
 
-1. start
+3. **start**
+
+Open another terminal
 
 ```
 npm start
 ```
 
+## Quick start
+
+```
+npm i && npm run startall
+```
+
+<!--
 ## Demo
 
 **This Demo is don't have a backend to retrieve data**
 
 Please Open In **Safari**
 
-https://leoyangfrontend.github.io/Netflix_mock/
+https://leoyangfrontend.github.io/Netflix_mock/ -->
 
 ## Screen Shot
 
